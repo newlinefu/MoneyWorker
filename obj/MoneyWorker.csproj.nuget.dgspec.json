@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\acer\\source\\repos\\MoneyWorker\\MoneyWorker.csproj": {}
+    "C:\\Users\\acer\\source\\repos\\MW_1\\MoneyWorker\\MoneyWorker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\acer\\source\\repos\\MoneyWorker\\MoneyWorker.csproj": {
+    "C:\\Users\\acer\\source\\repos\\MW_1\\MoneyWorker\\MoneyWorker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\acer\\source\\repos\\MoneyWorker\\MoneyWorker.csproj",
+        "projectUniqueName": "C:\\Users\\acer\\source\\repos\\MW_1\\MoneyWorker\\MoneyWorker.csproj",
         "projectName": "MoneyWorker",
-        "projectPath": "C:\\Users\\acer\\source\\repos\\MoneyWorker\\MoneyWorker.csproj",
+        "projectPath": "C:\\Users\\acer\\source\\repos\\MW_1\\MoneyWorker\\MoneyWorker.csproj",
         "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\acer\\source\\repos\\MoneyWorker\\obj\\",
+        "outputPath": "C:\\Users\\acer\\source\\repos\\MW_1\\MoneyWorker\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",

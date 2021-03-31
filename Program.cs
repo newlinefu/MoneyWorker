@@ -15,7 +15,8 @@ namespace MoneyWorker
 
         public static void Main(string[] args)
         {
-            ConsoleUtils.Run();
+            var engine = new ConsoleCurrencyRunner();
+            engine.Run();
         }
     }
 }

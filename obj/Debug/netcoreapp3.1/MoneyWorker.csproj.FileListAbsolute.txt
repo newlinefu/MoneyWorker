@@ -11,3 +11,16 @@ C:\Users\acer\source\repos\MoneyWorker\obj\Debug\netcoreapp3.1\MoneyWorker.cspro
 C:\Users\acer\source\repos\MoneyWorker\obj\Debug\netcoreapp3.1\MoneyWorker.dll
 C:\Users\acer\source\repos\MoneyWorker\obj\Debug\netcoreapp3.1\MoneyWorker.pdb
 C:\Users\acer\source\repos\MoneyWorker\obj\Debug\netcoreapp3.1\MoneyWorker.genruntimeconfig.cache
+C:\Users\acer\source\repos\MW_1\MoneyWorker\bin\Debug\netcoreapp3.1\MoneyWorker.exe
+C:\Users\acer\source\repos\MW_1\MoneyWorker\bin\Debug\netcoreapp3.1\MoneyWorker.deps.json
+C:\Users\acer\source\repos\MW_1\MoneyWorker\bin\Debug\netcoreapp3.1\MoneyWorker.runtimeconfig.json
+C:\Users\acer\source\repos\MW_1\MoneyWorker\bin\Debug\netcoreapp3.1\MoneyWorker.runtimeconfig.dev.json
+C:\Users\acer\source\repos\MW_1\MoneyWorker\bin\Debug\netcoreapp3.1\MoneyWorker.dll
+C:\Users\acer\source\repos\MW_1\MoneyWorker\bin\Debug\netcoreapp3.1\MoneyWorker.pdb
+C:\Users\acer\source\repos\MW_1\MoneyWorker\obj\Debug\netcoreapp3.1\MoneyWorker.csprojAssemblyReference.cache
+C:\Users\acer\source\repos\MW_1\MoneyWorker\obj\Debug\netcoreapp3.1\MoneyWorker.AssemblyInfoInputs.cache
+C:\Users\acer\source\repos\MW_1\MoneyWorker\obj\Debug\netcoreapp3.1\MoneyWorker.AssemblyInfo.cs
+C:\Users\acer\source\repos\MW_1\MoneyWorker\obj\Debug\netcoreapp3.1\MoneyWorker.csproj.CoreCompileInputs.cache
+C:\Users\acer\source\repos\MW_1\MoneyWorker\obj\Debug\netcoreapp3.1\MoneyWorker.dll
+C:\Users\acer\source\repos\MW_1\MoneyWorker\obj\Debug\netcoreapp3.1\MoneyWorker.pdb
+C:\Users\acer\source\repos\MW_1\MoneyWorker\obj\Debug\netcoreapp3.1\MoneyWorker.genruntimeconfig.cache

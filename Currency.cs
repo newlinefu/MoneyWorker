@@ -6,30 +6,21 @@ namespace MoneyWorker
 {
     internal class Currency
     {
-        private static Dictionary<Currencies, decimal> exchangeRates;
-
+        public CurrencyRate ActualRate { get; set; }
         public decimal Value { get; set; }
         public Currencies CurType { get; set; }
 
-        static Currency()
-        {
-            exchangeRates = new Dictionary<Currencies, decimal>() 
-            { 
-                { Currencies.RUBLE, 1M }, 
-                { Currencies.DOLLAR, 30.5M }, 
-                { Currencies.EURO, 40.64M } 
-            };
-        }
 
-        public Currency(decimal value, Currencies curType)
+        public Currency(decimal value, Currencies curType, CurrencyRate actualRate)
         {
             Value = value;
             CurType = curType;
+            ActualRate = actualRate;
         }
 
         public decimal ChangeCurrencyType(Currencies newCurType)
         {
-            Value = exchangeRates[CurType] * Value / exchangeRates[newCurType];
+            Value = ActualRate[CurType] * Value / ActualRate[newCurType];
             CurType = newCurType;
 
             return Value;
@@ -52,7 +43,12 @@ namespace MoneyWorker
 
         public static Currency operator -(Currency curOne, Currency curTwo)
         {
-            return new Currency(curOne.ChangeCurrencyType(Currencies.RUBLE) - curTwo.ChangeCurrencyType(Currencies.RUBLE), Currencies.RUBLE);
+            if(curOne.ActualRate != curTwo.ActualRate)
+            {
+                throw new Exception("The deductible currencies have different rates");
+            }
+
+            return new Currency(curOne.ChangeCurrencyType(Currencies.RUBLE) - curTwo.ChangeCurrencyType(Currencies.RUBLE),              Currencies.RUBLE, curOne.ActualRate);
         }
 
         public override string ToString()

@@ -5,19 +5,35 @@ using static MoneyWorker.Enums;
 
 namespace MoneyWorker
 {
-    internal static class ConsoleUtils
+    internal class ConsoleCurrencyRunner
     {
         private static Dictionary<string, Currencies> curStrings;
+        private CurrencyRate generalCurRate;
         private static string annotation = @"Enter:
     1 for get sum of two currencies
     2 for get difference of two currencies
     3 for get comparison result of two currencies
     4 or other symbol to exit
     (Please enter currency value in format like <10,2 e> where last symbol - currency type 
-    (e - euro, d - dollar, r - ruble))"
-        ;
-        static ConsoleUtils()
+    (e - euro, d - dollar, r - ruble))";
+
+
+        public ConsoleCurrencyRunner()
         {
+            bool isRateInitialized = false;
+            while(!isRateInitialized)
+            {
+                try
+                {
+                    generalCurRate = GetCurrencyRateFromConsole();
+                    isRateInitialized = true;
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine("Invalid value, try again");
+                }
+            }
+
             curStrings = new Dictionary<string, Currencies>()
             {
                 {"e", Currencies.EURO},
@@ -26,13 +42,13 @@ namespace MoneyWorker
             };
         }
 
-        public static void Run()
+        public void Run()
         {
             bool isRunning = true;
             while(isRunning)
             {
                 Console.WriteLine(annotation);
-                string step = Console.ReadLine();
+                string step = Console.ReadLine().Trim();
                 switch (step)
                 {
                     case "1":
@@ -106,9 +122,7 @@ namespace MoneyWorker
                             }
                             break;
                     }
-                    case "4":
-                        isRunning = false;
-                        break;
+
                     default:
                         isRunning = false;
                         break;
@@ -117,7 +131,7 @@ namespace MoneyWorker
             
         }
 
-        public static Currency ReadCurrencyFromConsole()
+        public Currency ReadCurrencyFromConsole()
         {
             string line = Console.ReadLine();
             string[] lineValues = line.Split(" ");
@@ -126,10 +140,22 @@ namespace MoneyWorker
                 && decimal.TryParse(lineValues[0], out decimal curValue) 
                 && curStrings.TryGetValue(lineValues[1], out Currencies curType))
             {
-                return new Currency(curValue, curType);
+                return new Currency(curValue, curType, generalCurRate);
             }
 
             return null;
+        }
+
+        public CurrencyRate GetCurrencyRateFromConsole()
+        {
+            Console.Write("Enter ruble value: ");
+            decimal rubbleValue = decimal.Parse(Console.ReadLine());
+            Console.Write("Enter dollar value: ");
+            decimal dollarValue = decimal.Parse(Console.ReadLine());
+            Console.Write("Enter euro value: ");
+            decimal euroValue = decimal.Parse(Console.ReadLine());
+
+            return new CurrencyRate(rubbleValue, dollarValue, euroValue);
         }
     }
 }
